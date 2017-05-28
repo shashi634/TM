@@ -1,0 +1,644 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<!-- Mirrored from sparrow-html.weblionmedia.net/hotel_detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Apr 2017 19:15:15 GMT -->
+<head>
+    <title>Holiday Zone | Travel Agency | New Delhi</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+    <link href="static/plugins/angular-block-ui.css" rel="stylesheet" />
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x- ng-cloak {
+            display: none !important;
+        }
+    </style>
+
+    <script src="js/jquery.1.7.1.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body ng-controller="PackageDetailsController" ng-cloak flow-prevent-drop>
+    <div ng-if="false">
+        <div class="block-ui-overlay"></div><div class="block-ui-message-container"><div class="block-ui-message"><i class="fa fa-cog fa-spin fa-5x"></i></div></div>
+    </div>
+    <!-- // authorize // -->
+    <div class="overlay"></div>
+    <div class="autorize-popup">
+        <div class="autorize-tabs">
+            <a href="#" class="autorize-tab-a current">Sign in</a>
+            <a href="#" class="autorize-tab-b">Register</a>
+            <a href="#" class="autorize-close"></a>
+            <div class="clear"></div>
+        </div>
+        <section class="autorize-tab-content">
+            <div class="autorize-padding">
+                <h6 class="autorize-lbl">Welocome! Login in to Your Accont</h6>
+                <input type="text" value="" placeholder="Name">
+                <input type="text" value="" placeholder="Password">
+                <footer class="autorize-bottom">
+                    <button class="authorize-btn">Login</button>
+                    <a href="#" class="authorize-forget-pass">Forgot your password?</a>
+                    <div class="clear"></div>
+                </footer>
+            </div>
+        </section>
+        <section class="autorize-tab-content">
+            <div class="autorize-padding">
+                <h6 class="autorize-lbl">Register for Your Account</h6>
+                <input type="text" value="" placeholder="Name">
+                <input type="text" value="" placeholder="Password">
+                <footer class="autorize-bottom">
+                    <button class="authorize-btn">Registration</button>
+                    <div class="clear"></div>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <!-- \\ authorize \\-->
+    <header id="top">
+        <div class="header-a">
+            <div class="wrapper-padding">
+                <div class="header-phone"><span>011 - 32328232, 43058282</span></div>
+                <div class="header-account">
+                    <a href="#">My account</a>
+                </div>
+                <div class="header-social">
+                    <a href="#" class="social-twitter"></a>
+                    <a href="#" class="social-facebook"></a>
+                    <a href="#" class="social-vimeo"></a>
+                    <a href="#" class="social-pinterest"></a>
+                    <a href="#" class="social-instagram"></a>
+                </div>
+
+                <div class="header-lang">
+                    <a href="#"><img alt="" src="img/ind.jpg" /></a>
+                </div>
+                <div class="header-curency">
+                    <a href="#">INR</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="header-b">
+            <!-- // mobile menu // -->
+            <div class="mobile-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">HOME</a>
+
+                        </li>
+                        <li>
+
+                            <a href="about_us.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="location.html">Locations</a>
+
+                        </li>
+                        <li>
+                            <a href="policy.html">Policy</a>
+
+                        </li>
+                        <li>
+                            <a href="faqs.html">FAQs</a>
+
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+
+                        </li>
+
+                        <li><a href="contacts.html">CONTACS</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- \\ mobile menu \\ -->
+
+            <div class="wrapper-padding">
+                <div class="header-logo"><a href="index-2.html"><img alt="" src="img/logo.png" /></a></div>
+                <div class="header-right">
+                    <div class="hdr-srch">
+                        <a href="#" class="hdr-srch-btn"></a>
+                    </div>
+                    <div class="hdr-srch-overlay">
+                        <div class="hdr-srch-overlay-a">
+                            <input type="text" value="" placeholder="Start typing...">
+                            <a href="#" class="srch-close"></a>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="hdr-srch-devider"></div>
+                    <a href="#" class="menu-btn"></a>
+                    <nav class="header-nav">
+                        <ul>
+                            <li>
+                                <a href="/">HOME</a>
+
+                            </li>
+                            <li>
+
+                                <a href="about_us.html">About us</a>
+                            </li>
+                            <li>
+                                <a href="location.html">Locations</a>
+
+                            </li>
+                            <li>
+                                <a href="policy.html">Policy</a>
+
+                            </li>
+                            <li>
+                                <a href="faqs.html">FAQs</a>
+
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+
+                            </li>
+
+                            <li><a href="contacts.html">CONTACS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main-cont -->
+    <div class="main-cont" block-ui="main">
+        <div class="body-wrapper">
+            <div class="wrapper-padding">
+                <div class="page-head">
+                    <div class="page-title">Package - <span>Detail</span></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="sp-page">
+
+                    <div class="sp-page-a">
+                        <div class="sp-page-l">
+                            <div class="sp-page-lb">
+                                <div class="sp-page-p">
+                                    <div class="booking-left">
+                                        <h2>Your Personal Information</h2>
+                                        <div class="booking-form">
+                                            <div class="booking-form-i">
+                                                <label>First Name:</label>
+                                                <div class="input"><input type="text" value="" /></div>
+                                            </div>
+                                            <div class="booking-form-i">
+                                                <label>Last Name:</label>
+                                                <div class="input"><input type="text" value="" /></div>
+                                            </div>
+                                            <div class="booking-form-i">
+                                                <label>Email Adress:</label>
+                                                <div class="input"><input type="text" value="" /></div>
+                                            </div>
+                                            <div class="booking-form-i">
+                                                <label>Confirm Email Adress:</label>
+                                                <div class="input"><input type="text" value="" /></div>
+                                            </div>
+                                            <div class="booking-form-i">
+                                                <label>Country code:</label>
+                                                <div class="input"><input type="text" value="" /></div>
+                                            </div>
+                                            <div class="booking-form-i">
+                                                <label>Preferred Phone Number:</label>
+                                                <div class="input"><input type="text" value="" /></div>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="" />
+                                                    I want to receive Sparrow news in the future
+                                                </label>
+                                            </div>
+                                            <div class="booking-devider"></div>
+                                        </div>
+                                        <h2>How would you like to pay?</h2>
+
+                                        <div class="payment-wrapper">
+                                            <div class="payment-tabs">
+                                                <a href="#" class="active">Credit Card <span></span></a>
+                                                <a href="#">Paypal <span></span></a>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="payment-tabs-content">
+                                                <!-- // -->
+                                                <div class="payment-tab">
+                                                    <div class="payment-type">
+                                                        <label>Card Type:</label>
+                                                        <div class="card-type"><img alt="" src="img/paymentt-01.png"></div>
+                                                        <div class="card-type"><img alt="" src="img/paymentt-02.png"></div>
+                                                        <div class="card-type"><img alt="" src="img/paymentt-03.png"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                    <div class="booking-form">
+                                                        <div class="booking-form-i">
+                                                            <label>Card Number:</label>
+                                                            <div class="input"><input type="text" value=""></div>
+                                                        </div>
+                                                        <div class="booking-form-i">
+                                                            <label>Card Holder Name:</label>
+                                                            <div class="input"><input type="text" value=""></div>
+                                                        </div>
+                                                        <div class="booking-form-i">
+                                                            <label>Expiration Date:</label>
+                                                            <div class="card-expiration">
+                                                                <select class="custom-select">
+                                                                    <option>Month</option>
+                                                                    <option>01</option>
+                                                                    <option>02</option>
+                                                                    <option>03</option>
+                                                                    <option>04</option>
+                                                                    <option>05</option>
+                                                                    <option>06</option>
+                                                                    <option>07</option>
+                                                                    <option>08</option>
+                                                                    <option>09</option>
+                                                                    <option>10</option>
+                                                                    <option>11</option>
+                                                                    <option>12</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="card-expiration">
+                                                                <select class="custom-select card-year">
+                                                                    <option>Year</option>
+                                                                    <option>2015</option>
+                                                                    <option>2016</option>
+                                                                    <option>2017</option>
+                                                                    <option>2018</option>
+                                                                    <option>2019</option>
+                                                                    <option>2020</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="clear"></div>
+                                                        </div>
+                                                        <div class="booking-form-i">
+                                                            <label>Card Indefication Number:</label>
+                                                            <div class="inpt-comment">
+                                                                <div class="inpt-comment-l">
+                                                                    <div class="inpt-comment-lb">
+                                                                        <div class="input"><input type="text" value=""></div>
+                                                                    </div>
+                                                                    <div class="clear"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="inpt-comment-r">
+                                                                <div class="padding">
+                                                                    <a href="#">What’s This?</a>
+                                                                </div>
+                                                                <div class="clear"></div>
+                                                            </div>
+                                                            <div class="clear"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="" />
+                                                            Im accept the rules <a href="#">Terms & Conditions</a>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- \\ -->
+                                                <!-- // -->
+                                                <div class="payment-tab">
+                                                    <div class="payment-alert">
+                                                        <span>You will be redirected to PayPal's website to securely complete your payment.</span>
+                                                        <div class="payment-alert-close"><a href="#"><img alt="" src="img/alert-close.png"></a></div>
+                                                    </div>
+                                                    <a href="#" class="paypal-btn">proceed to paypall</a>
+                                                </div>
+                                                <!-- \\ -->
+                                            </div>
+                                        </div>
+                                        <div class="booking-complete">
+                                            <h2>Review and book your trip</h2>
+                                            <p>Voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui voluptatem sequi nesciunt. </p>
+                                            <button class="booking-complete-btn">COMPLETE BOOKING</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="sp-page-r">
+
+                        <div class="checkout-coll">
+                            <div class="checkout-head">
+                                <div class="checkout-headl">
+                                    <a href="#"><img alt="" src="img/check-img.png"></a>
+                                </div>
+                                <div class="checkout-headr">
+                                    <div class="checkout-headrb">
+                                        <div class="checkout-headrp">
+                                            <div class="chk-left">
+                                                <div class="chk-lbl"><a href="#">{{Package.Name}}</a></div>
+                                                <div class="chk-lbl-a">{{Package.city}}, {{Package.CountryName}}</div>
+
+
+                                            </div>
+                                            <div class="chk-right">
+                                                <a href="#"><img alt="" src="img/chk-edit.png"></a>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+
+                            <div class="chk-lines">
+                                <div class="chk-line">
+                                    <span class="chk-nights">{{Package.NoOfNight}} Nights and {{Package.NoOfDays}} Days</span>
+                                    <span class="chk-dates">{{Package.StartDate| date :  "dd.MM.y"}} - {{Package.EndDate| date :  "dd.MM.y"}}</span>
+                                </div>
+                                <div class="chk-line">
+                                    {{Package.Address}}
+                                </div>
+                                <h2>Customize your selection</h2>
+                                <div class="chk-line">
+                                    <span class="chk-l">No of Child</span>
+                                    <span class="chk-r">
+                                       <input type="number" min="1" ng-model="NoOfChild" ng-change="ChildUpdate()" style="padding: 6px 10px 6px 10px;border: 1px solid #e3e3e3;border-radius: 2px; width:50px" />
+                                        </span>
+                                    <div class="clear"></div>       
+                                 </div>
+                                <div class="chk-line">
+                                    <span class="chk-l">No of Extra Person</span>
+                                    <span class="chk-r">
+                                        <input type="number" min="1" ng-model="NoOfAdult" style="padding: 6px 10px 6px 10px;border: 1px solid #e3e3e3;border-radius: 2px; width:50px" />
+                                    </span>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="chk-line">
+                                    <span class="chk-l">No of Single Person</span>
+                                    <span class="chk-r">
+                                        <input type="number" min="1" ng-model="NoOfSP" style="padding: 6px 10px 6px 10px;border: 1px solid #e3e3e3;border-radius: 2px; width:50px" />
+                                    </span>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+
+                            <div class="chk-details">
+                                <h2>Details</h2>
+                                <div class="chk-detais-row">
+                                    <div class="chk-line">
+                                        <span class="chk-l">Room type</span>
+                                        <span class="chk-r">{{Package.RoomType}}</span>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="chk-line">
+                                        <span class="chk-l">Meal Type</span>
+                                        <span class="chk-r">{{Package.HotelMealPlan}}</span>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="chk-line" ng-if="Package.WDP==0 && Package.WKP==0 && Package.SDP==0 ">
+                                        <span class="chk-l">Couple</span>
+                                        <span class="chk-r">{{Package.NDP}} + {{Package.NDTax}}</span>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="chk-line" ng-if="Package.WKP!=0">
+                                        <span class="chk-l">Couple (Weekdays)</span>
+                                        <span class="chk-r">{{Package.WKP}} + {{Package.NDTax}}</span>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="chk-line" ng-if="Package.WDP!=0">
+                                        <span class="chk-l">Couple (Weekends)</span>
+                                        <span class="chk-r">{{Package.WDP}} + {{Package.NDTax}}</span>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="chk-line" ng-if="Package.SDP!=0">
+                                        <span class="chk-l">Couple (Specialday)</span>
+                                        <span class="chk-r">{{Package.SDP}} + {{Package.NDTax}}</span>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="chk-line">
+                                        <span class="chk-l">Extra Child</span>
+                                        <span class="chk-r">{{Package.NDECP}}+ {{Package.NDECT}} %</span>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="chk-line">
+                                        <span class="chk-l">Extra Adult </span>
+                                        <span class="chk-r">{{Package.NDEAP}} + {{Package.NDEAT}} %</span>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="chk-line">
+                                        <span class="chk-l">taxes and fees per night</span>                           
+                                        <span class="chk-r">3.52%</span>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="chk-total" ng-if="Package.WDP==0 && Package.WKP==0 && Package.SDP==0 ">
+                                    <div class="chk-total-l">Total Price</div>
+                                    <div class="chk-total-r">{{Package.NDEAP + (Package.NDECP*NoOfChild) + Package.NDP}}</div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="chk-total" ng-if="Package.WKP!=0">
+                                    <div class="chk-total-l">Total Price Week days</div>
+                                    <div class="chk-total-r">{{Package.WKP + Package.NDECP + Package.NDP}}</div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="chk-total" ng-if="Package.WDP!=0">
+                                    <div class="chk-total-l">Total Price Weekends</div>
+                                    <div class="chk-total-r">{{Package.WDP + Package.NDECP + Package.NDP}}</div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="chk-total" ng-if="Package.SDP!=0">
+                                    <div class="chk-total-l">Total Price Special Day</div>
+                                    <div class="chk-total-r">{{Package.SDP + Package.NDECP + Package.NDP}}</div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="chk-total" ng-if="Package.SPP!=0">
+                                    <div class="chk-total-l">Total Price Single Person</div>
+                                    <div class="chk-total-r">{{Package.NDEAP + Package.NDECP + Package.NDP}}</div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="h-help">
+                            <div class="h-help-lbl">Need Help?</div>
+                            <div class="h-help-lbl-a">We would be happy to help you!</div>
+                            <div class="h-help-phone">09891292895, 09899790403, 09899338232</div>
+                            <div class="h-help-email">holidayzonepankaj@gmail.com</div>
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /main-cont -->
+    <footer class="footer-a">
+        <div class="wrapper-padding">
+            <div class="section">
+                <div class="footer-lbl">Get In Touch</div>
+                <div class="footer-adress">Address: 58911 Lepzig Hore,<br />85000 Vienna, Austria</div>
+                <div class="footer-phones">Telephones: +1 777 55-32-21</div>
+                <div class="footer-email">E-mail: contacts@miracle.com</div>
+                <div class="footer-skype">Skype: angelotours</div>
+            </div>
+            <div class="section">
+                <div class="footer-lbl">Featured deals</div>
+                <div class="footer-tours">
+                    <!-- // -->
+                    <div class="footer-tour">
+                        <div class="footer-tour-l"><a href="#"><img alt="" src="img/f-tour-01.jpg" /></a></div>
+                        <div class="footer-tour-r">
+                            <div class="footer-tour-a">amsterdam tour</div>
+                            <div class="footer-tour-b">location: netherlands</div>
+                            <div class="footer-tour-c">800$</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!-- \\ -->
+                    <!-- // -->
+                    <div class="footer-tour">
+                        <div class="footer-tour-l"><a href="#"><img alt="" src="img/f-tour-02.jpg" /></a></div>
+                        <div class="footer-tour-r">
+                            <div class="footer-tour-a">Kiev tour</div>
+                            <div class="footer-tour-b">location: ukraine</div>
+                            <div class="footer-tour-c">550$</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!-- \\ -->
+                    <!-- // -->
+                    <div class="footer-tour">
+                        <div class="footer-tour-l"><a href="#"><img alt="" src="img/f-tour-03.jpg" /></a></div>
+                        <div class="footer-tour-r">
+                            <div class="footer-tour-a">vienna tour</div>
+                            <div class="footer-tour-b">location: austria</div>
+                            <div class="footer-tour-c">940$</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!-- \\ -->
+                </div>
+            </div>
+            <div class="section">
+                <div class="footer-lbl">Twitter widget</div>
+                <div class="twitter-wiget">
+                    <div id="twitter-feed"></div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="footer-lbl">newsletter sign up</div>
+                <div class="footer-subscribe">
+                    <div class="footer-subscribe-a">
+                        <input type="text" placeholder="you email" value="" />
+                    </div>
+                </div>
+                <button class="footer-subscribe-btn">Sign up</button>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </footer>
+    <footer class="footer-b">
+        <div class="wrapper-padding">
+            <div class="footer-left">© Copyright 2015 BY HolidayZone. All rights reserved.</div>
+            <div class="footer-social">
+                <a href="#" class="footer-twitter"></a>
+                <a href="#" class="footer-facebook"></a>
+                <a href="#" class="footer-vimeo"></a>
+                <a href="#" class="footer-pinterest"></a>
+                <a href="#" class="footer-instagram"></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+    <!-- // scripts // -->
+    <script src="js/jquery.1.7.1.js"></script>
+    <script src="js/jqeury.appear.js"></script>
+    <script src="js/jquery.ui.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bxSlider.js"></script>
+    <script src="js/custom.select.js"></script>
+    <script src="angularjs/app.js"></script>
+    <script src="angularjs/XSS.js"></script>
+    <script src="angularjs/block-ui.js"></script>
+    <script src="angularjs/controller/PackageDetailsController.js"></script>
+    <script>
+
+  	$(document).ready(function(){
+    $('.custom-select').customSelect();
+    $('.review-ranger').each(function(){
+      var $this = $(this);
+      var $index = $(this).index();
+      if ( $index=='0' ) {
+        var $val = '3.0'
+      } else if ( $index=='1' ) {
+        var $val = '3.8'
+      } else if ( $index=='2' ) {
+        var $val = '2.8'
+      } else if ( $index=='3' ) {
+        var $val = '4.8'
+      } else if ( $index=='4' ) {
+        var $val = '4.3'
+      } else if ( $index=='5' ) {
+        var $val = '5.0'
+      }
+      $this.find('.slider-range-min').slider({
+        range: "min",
+        step: 0.1,
+        value: $val,
+        min: 0.1,
+        max: 5.1,
+        create: function( event, ui ) {
+          $this.find('.ui-slider-handle').append('<span class="range-holder"><i></i></span>');
+        },
+        slide: function( event, ui ) {
+          $this.find(".range-holder i").text(ui.value);
+        }
+      });
+      $this.find(".range-holder i").text($val);
+    });
+
+    	$('#reasons-slider').bxSlider({
+        	infiniteLoop: true,
+        	speed: 500,
+          mode:'fade',
+        	minSlides: 1,
+        	maxSlides: 1,
+        	moveSlides: 1,
+        	auto: true,
+        	slideMargin: 0
+    	});
+
+      $('#gallery').bxSlider({
+        	infiniteLoop: true,
+        	speed: 500,
+        	slideWidth: 108,
+        	minSlides: 1,
+        	maxSlides: 6,
+        	moveSlides: 1,
+        	auto: false,
+        	slideMargin: 7
+    	});
+
+  		$(function() {
+    	  $(document.body).on('appear', '.fly-in', function(e, $affected) {
+      		$(this).addClass("appeared");
+    	  });
+    	  $('.fly-in').appear({force_process: true});
+  		});
+  	});
+    </script>
+</body>
+</html> 

@@ -1,0 +1,725 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <title>Holiday Zone | Travel Agency | New Delhi</title>
+  <meta name="description" content="Holiday Zone is a travel Agency based in New Delhi" />
+  <meta name="keywords" content="" />
+  <meta charset="utf-8" /><link rel="icon" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+  <link rel="stylesheet" href="js/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery.ui.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/idangerous.swiper.css">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="static/plugins/angular-block-ui.css" rel="stylesheet" />
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x- ng-cloak {
+            display: none !important;
+        }
+    </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>	
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <script src="js/jquery.1.7.1.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <style type="text/css">
+
+        *:before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans";
+        }
+        /* Form Progress */
+
+        .progress {
+            margin: 20px auto;
+            text-align: center;
+            padding-bottom: 80px;
+        }
+
+        .progress .circle,
+        .progress .bar {
+            display: inline-block;
+            background: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            border: 1px solid #d5d5da;
+            vertical-align: top;
+        }
+
+        .progress .bar {
+            position: relative;
+            width: 80px;
+            height: 6px;
+            margin: 0 -5px 17px -5px;
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+            top: 16px;
+            vertical-align: top;
+        }
+
+        .progress .circle .label {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 32px;
+            margin-top: 3px;
+            color: #b5b5ba;
+            font-size: 17px;
+        }
+
+        .progress .circle .title {
+            color: #b5b5ba;
+            font-size: 13px;
+            line-height: 18px;
+            margin-left: -30px;
+            display: block;
+            width: 100px;
+            margin-top: 5px;
+        }
+        /* Done / Active */
+
+        .progress .bar.done,
+        .progress .circle.done {
+            background: #eee;
+        }
+
+        .progress .bar.active {
+            background: linear-gradient(to right, #EEE 40%, #FFF 60%);
+        }
+
+        .progress .circle.done .label {
+            color: #FFF;
+            background: #8bc435;
+            box-shadow: inset 0 0 2px rgba(0, 0, 0, .2);
+        }
+
+        .progress .circle.done .title {
+            color: #444;
+        }
+
+        .progress .circle.active .label {
+            color: #FFF;
+            background: #0c95be;
+            box-shadow: inset 0 0 2px rgba(0, 0, 0, .2);
+        }
+
+        .progress .circle.active .title {
+            color: #0c95be;
+        }
+    </style>        
+    <style type="text/css">
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 99;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+            -moz-opacity: 0.8;
+            min-height: 100%;
+            width: 100%;
+        }
+
+        .loading {
+            font-family: Arial;
+            font-size: 10pt;
+            border: 5px solid #67CFF5;
+            width: 200px;
+            height: 100px;
+            display: none;
+            position: fixed;
+            background-color: White;
+            z-index: 999;
+        }
+    </style>
+
+</head>  
+<body class="index-page" ng-controller="HomePageController" ng-cloak flow-prevent-drop>
+    <div ng-if="false">
+        <div class="block-ui-overlay"></div><div class="block-ui-message-container"><div class="block-ui-message"><i class="fa fa-cog fa-spin fa-5x"></i></div></div>
+    </div>
+    <!-- // authorize // -->
+    <div class="overlay"></div>
+    <div class="autorize-popup">
+        <div class="autorize-tabs">
+            <a href="#" class="autorize-tab-a current">Sign in</a>
+            <a href="#" class="autorize-tab-b">Register</a>
+            <a href="#" class="autorize-close"></a>
+            <div class="clear"></div>
+        </div>
+        <section class="autorize-tab-content">
+            <div class="autorize-padding">
+                <h6 class="autorize-lbl">Welocome! Login in to Your Accont</h6>
+                <input type="text" value="" placeholder="Name">
+                <input type="text" value="" placeholder="Password">
+                <footer class="autorize-bottom">
+                    <button class="authorize-btn">Login</button>
+                    <a href="#" class="authorize-forget-pass">Forgot your password?</a>
+                    <div class="clear"></div>
+                </footer>
+            </div>
+        </section>
+        <section class="autorize-tab-content">
+            <div class="autorize-padding">
+                <h6 class="autorize-lbl">Register for Your Account</h6>
+                <input type="text" value="" placeholder="Name">
+                <input type="text" value="" placeholder="Password">
+                <footer class="autorize-bottom">
+                    <button class="authorize-btn">Registration</button>
+                    <div class="clear"></div>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <!-- \\ authorize \\-->
+
+    <header id="top">
+        <div class="header-a">
+            <div class="wrapper-padding">
+                <div class="header-phone"><span>011 - 32328232, 43058282</span></div>
+                <div class="header-account">
+                    <a href="#">My account</a>
+                </div>
+                <div class="header-social">
+                    <a href="#" class="social-twitter"></a>
+                    <a href="#" class="social-facebook"></a>
+                    <a href="#" class="social-vimeo"></a>
+                    <a href="#" class="social-pinterest"></a>
+                    <a href="#" class="social-instagram"></a>
+                </div>
+                <div class="header-lang">
+                    <a href="#"><img alt="" src="img/ind.jpg" /></a>
+
+                </div>
+                <div class="header-curency">
+                    <a href="#">INR</a>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="header-b">
+            <!-- // mobile menu // -->
+            <div class="mobile-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">HOME</a>
+
+                        </li>
+                        <li>
+                            
+                            <a href="about_us.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="location.html">Locations</a>
+
+                        </li>
+                        <li>
+                            <a href="policy.html">Policy</a>
+
+                        </li>
+                        <li>
+                            <a href="faqs.html">FAQs</a>
+
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+
+                        </li>
+
+                        <li><a href="contacts.html">CONTACS</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- \\ mobile menu \\ -->
+
+            <div class="wrapper-padding">
+                <div class="header-logo"><a href="/"><img alt="" src="img/logo.png" /></a></div>
+                <div class="header-right">
+
+                    <a href="#" class="menu-btn"></a>
+                    <nav class="header-nav">
+                        <ul>
+                            <li>
+                                <a href="/">HOME</a>
+
+                            </li>
+                            <li>
+
+                                <a href="about_us.html">About us</a>
+                            </li>
+                            <li>
+                                <a href="location.html">Locations</a>
+
+                            </li>
+                            <li>
+                                <a href="policy.html">Policy</a>
+
+                            </li>
+                            <li>
+                                <a href="faqs.html">FAQs</a>
+
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+
+                            </li>
+
+                            <li><a href="contacts.html">CONTACS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <!-- main-cont -->
+    <div class="main-cont">
+        <div class="body-padding">
+            <div class="mp-slider">
+                <!-- // slider // -->
+                <div class="mp-slider-row">
+                    <div class="swiper-container">
+                        <div class="swiper-preloader-bg"></div>
+                        <div id="preloader">
+                            <div id="spinner"></div>
+                        </div>
+
+                        <a href="#" class="arrow-left"></a>
+                        <a href="#" class="arrow-right"></a>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-section" style="background:url(img/sider-01.jpg) center top no-repeat;">
+                                    <div class="mp-slider-lbl">Great journey begins with a small step</div>
+                                    <div class="mp-slider-lbl-a">Make Your Life Better and Bright!  You must trip with Us!</div>
+                                    <div class="mp-slider-btn"><a href="#" class="btn-a">Learn more</a></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-section slide-b" style="background:url(img/sider-02.jpg) center top no-repeat;">
+                                    <div class="mp-slider-lbl">Relax with us. we love our clients</div>
+                                    <div class="mp-slider-lbl-a">Make Your Life Better and Bright!  You must trip with Us!</div>
+                                    <div class="mp-slider-btn"><a href="#" class="btn-a">Learn more</a></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-section slide-b" style="background:url(img/sider-03.jpg) center top no-repeat;">
+                                    <div class="mp-slider-lbl">the best relax with us</div>
+                                    <div class="mp-slider-lbl-a">Make Your Life Better and Bright!  You must trip with Us!</div>
+                                    <div class="mp-slider-btn"><a href="#" class="btn-a">Learn more</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- \\ slider \\ -->
+            </div>
+
+            <div class="wrapper-a-holder full-width-search">
+                <div class="wrapper-a">
+
+                    <!-- // search // -->
+                    <div class="page-search full-width-search search-type-b">
+                        <div class="search-type-padding">
+                            <nav class="page-search-tabs">
+                                <div class="search-tab active">Tours</div>
+                                <div class="clear"></div>
+                            </nav>
+                            <div class="page-search-content">
+
+                                <div class="search-tab-content">
+                                    <div class="page-search-p">
+
+                                        <!-- // -->
+                                        <div class="search-large-i">
+                                            <!-- // -->
+                                            <div class="srch-tab-line no-margin-bottom">
+                                                <div class="srch-tab-left">
+                                                    <label>Country</label>
+                                                    <div class="input-a"><input type="text" value="" placeholder="example: france" ng-model="searchParam.Country" ng-change="getLocation()"></div>
+                                                </div>
+                                                <div class="srch-tab-right">
+                                                    <label>city</label>
+                                                    <div class="input-a"><input type="text" value="" placeholder="vienna" ng-model="searchParam.City" ng-change="getLocation()"></div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <!-- \\ -->
+                                        </div>
+                                        <!-- \\ -->
+                                        <!-- // -->
+                                        <div class="search-large-i">
+                                            <div class="srch-tab-left" style="width:100px">
+                                                <br />
+                                                <span class="srch-btn" ng-click="getLocation()">Search</span>
+                                            </div>
+                                            <div class="srch-tab-right">
+                                                <label>Direct Call Us</label>
+                                                <div>
+                                                    <h1>09891292895, 9899790403</h1>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- \\ search \\ -->
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pop-destinations" block-Ui="main">
+                <header class="fly-in page-lbl">
+                    <b>Popular Destinations</b>
+                    <p>Choose your favourate tourist destination and select your package.</p>
+                    <div class="progress">
+                        <div class="circle done">
+                            <span class="label">1</span>
+                            <span class="title">Choose Location</span>
+
+                        </div> <span class="bar done"></span>
+
+                        <div class="circle done">
+                            <span class="label">2</span>
+                            <span class="title">Explore More</span>
+
+                        </div> <span class="bar active"></span>
+
+                        <div class="circle active">
+                            <span class="label">3</span>
+                            <span class="title">Choose Package</span>
+
+                        </div> <span class="bar"></span>
+
+                        <div class="circle">
+                            <span class="label">4</span>
+                            <span class="title">Review</span>
+
+                        </div> <span class="bar"></span>
+
+                        <div class="circle">
+                            <span class="label">5</span>
+                            <span class="title">Payment</span>
+
+                        </div><span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">6</span>
+                            <span class="title">Enjoy</span>
+
+                        </div>
+                    </div>
+                </header>
+                <div class="mp-popular-row popular-flat">
+                    <!-- // -->
+                    <div class="fly-in offer-slider-i" ng-repeat="x in locationData">
+                        <a class="offer-slider-img" href="LocationDetail.html?id={{x.PublicId}}">
+                            <img alt="" src="{{x.FrontImage}}" style="min-height:250px" />
+                            <span class="offer-slider-overlay">
+                                <span class="offer-slider-btn">view details</span>
+                            </span>
+                        </a>
+                        <div class="offer-slider-txt">
+                            <div class="offer-slider-link"><a href="#">{{x.City}}, {{x.Country}}</a></div>
+                            <div class="offer-slider-l">
+                                <div class="offer-slider-location">{{x.TotalHotel}} Listed Hotels</div>
+                                <nav class="stars">
+                                    <ul>
+                                        <li><a href="#"><img alt="" src="img/star-b.png" /></a></li>
+                                        <li><a href="#"><img alt="" src="img/star-b.png" /></a></li>
+                                        <li><a href="#"><img alt="" src="img/star-b.png" /></a></li>
+                                        <li><a href="#"><img alt="" src="img/star-b.png" /></a></li>
+                                        <li><a href="#"><img alt="" src="img/star-a.png" /></a></li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                </nav>
+                            </div>
+                            <div class="offer-slider-r align-right">
+                                <a href="package.html?id={{x.LocationPublicId}}">
+                                    <div class="chk-total-r">
+                                        Explore Packages
+                                    </div>
+                                </a>
+
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                        <!-- \\ -->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="mp-offesr">
+                    <div class="wrapper-padding-a">
+                        <div class="offer-slider">
+                            <header class="fly-in page-lbl">
+                                <div class="offer-slider-lbl">We are Offering the hottest offers</div>
+                                <p>
+                                    Travel is a hobby. People like to travel a lot. You can travel and explore every nook and corner of your own country. You can do the same with other countries too. Travelling around the world is a joyful, as well as a learning experience. We shall examine a few tips on how to travel the world.
+                                </p>
+                                <p>“A traveler without observation is a bird without wings.”</p>
+                                <p>“Stuff your eyes with wonder, live as if you’d drop dead in ten seconds. See the world. It’s more fantastic than any dream made or paid for in factories.”</p>
+                                <p>“To my mind, the greatest reward and luxury of travel is to be able to experience everyday things as if for the first time, to be in a position in which almost nothing is so familiar it is taken for granted.”</p>
+                            </header>
+                        </div>
+                    </div>
+                </div>
+                <div class="mp-b">
+                    <div class="wrapper-padding">
+                        <div class="fly-in mp-b-left">
+                            <div class="mp-b-lbl">choose hotel by region</div>
+                            <!-- // regions // -->
+                            <div class="regions">
+                                <div class="regions-holder">
+                                    <map id="imgmap201410281607" name="imgmap201410281607"></map>
+                                    <div class="asia"></div>
+                                    <div class="africa"></div>
+                                    <div class="austalia"></div>
+                                    <div class="europe"></div>
+                                    <div class="north-america"></div>
+                                    <div class="south-america"></div>
+                                </div>
+                            </div>
+                            <!-- // regions // -->
+                            <nav class="regions-nav">
+                                <ul>
+                                    <li><a class="europe" href="#">Europe</a></li>
+                                    <li><a class="asia" href="#">Asia</a></li>
+                                    <li><a class="north-america" href="#">North america</a></li>
+                                    <li><a class="south-america" href="#">south america</a></li>
+                                    <li><a class="africa" href="#">africa</a></li>
+                                    <li><a class="austalia" href="#">australia</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="fly-in mp-b-right">
+                            <div class="mp-b-lbl">reasons to book with us</div>
+                            <div class="reasons-item-a">
+                                <div class="reasons-lbl">24X7 Assistance</div>
+                                <div class="reasons-txt">Always ready to assist you from departure to return home with good memory without any delay. </div>
+                            </div>
+                            <div class="reasons-item-b">
+                                <div class="reasons-lbl">Wide Offers</div>
+                                <div class="reasons-txt">Choose your favourate tourist destination and select suitable package for you and your loving one. </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="reasons-item-c">
+                                <div class="reasons-lbl">Easy Payment</div>
+                                <div class="reasons-txt">Easy payment and refund* (in any case) with transparacy. No hidden chargeas just pay what you see. </div>
+                            </div>
+                            <div class="reasons-item-d">
+                                <div class="reasons-lbl">Easy Policy</div>
+                                <div class="reasons-txt">Customer friendly policy it is not just booking but a relationship beyond business.  </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- /main-cont -->
+        
+    </div>
+    <footer class="footer-a">
+        <div class="wrapper-padding">
+            <div class="section">
+                <div class="footer-lbl">Get In Touch</div>
+                <div class="footer-adress">Address: Near Nirman Vihar Metro Staton,<br />Laxmi Nagar, India</div>
+                <div class="footer-phones">Telephones: 09891292895, 09899790403, 09899338232 </div>
+                <div class="footer-email">E-mail: holidayzonepankaj@gmail.com </div>
+                <div class="footer-skype">Skype: holidayzone</div>
+            </div>
+            <div class="section" style="margin-left:60px"><div class="footer-lbl">We are Serving</div>
+                <div class="fly-in mp-b-left">
+                    <div class="regions" >
+                        <div class="regions-holder">
+                            <map id="imgmap201410281607" name="imgmap201410281607"></map>
+                            <div class="asia"></div>
+                            <div class="africa"></div>
+                            <div class="austalia"></div>
+                            <div class="europe"></div>
+                            <div class="north-america"></div>
+                            <div class="south-america"></div>
+                        </div>
+                    </div>
+                    <!-- // regions // -->
+                    <nav class="regions-nav">
+                        <ul>
+                            <li><a class="europe" href="#">Europe</a></li>
+                            <li><a class="asia" href="#">Asia</a></li>
+                            <li><a class="north-america" href="#">North america</a></li>
+                            <li><a class="south-america" href="#">south america</a></li>
+                            <li><a class="africa" href="#">africa</a></li>
+                            <li><a class="austalia" href="#">australia</a></li>
+                        </ul>
+                    </nav>
+                </div> 
+            </div>
+            <div class="section">
+
+            </div>
+            <div class="section">
+                <div class="footer-lbl">newsletter sign up</div>
+                <div class="footer-subscribe">
+                    <div class="footer-subscribe-a">
+                        <input type="text" placeholder="you email" value="" />
+                    </div>
+                </div>
+                <button class="footer-subscribe-btn">Sign up</button>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </footer>
+
+    <footer class="footer-b">
+        <div class="wrapper-padding">
+            <div class="footer-left">© Copyright 2015 BY HolidayZone. All rights reserved.</div>
+            <div class="footer-social">
+                <a href="#" class="footer-twitter"></a>
+                <a href="#" class="footer-facebook"></a>
+                <a href="#" class="footer-vimeo"></a>
+                <a href="#" class="footer-pinterest"></a>
+                <a href="#" class="footer-instagram"></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+
+
+    <!-- // scripts // -->
+    <script src="js/jquery.ui.js"></script>
+    <script src="js/jquery.formstyler.js"></script>
+    <script src="js/idangerous.swiper.js"></script>
+    <script src="js/slideInit.js"></script>
+    <script src="js/jqeury.appear.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.select.js"></script>
+    <script src="js/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+    <script src="angularjs/app.js"></script>
+    <script src="angularjs/XSS.js"></script>
+    <script src="angularjs/block-ui.js"></script>
+    <script src="angularjs/controller/HomePageController.js"></script>
+    <script src="angularjs/reposotory/PublicRepository.js"></script>
+       <script>
+        $(document).ready(function () {
+            $('.date-inpt').datepicker();
+            $('.custom-select').customSelect();
+            $(function () {
+                $(document.body).on('appear', '.fly-in', function (e, $affected) {
+                    $(this).addClass("appeared");
+                });
+                $('.fly-in').appear({ force_process: true });
+            });
+
+            $(".owl-slider").owlCarousel({
+                loop: true,
+                margin: 28,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    620: {
+                        items: 2,
+                        nav: true
+                    },
+                    900: {
+                        items: 3,
+                        nav: false
+                    },
+                    1120: {
+                        items: 4,
+                        nav: true,
+                        loop: false
+                    }
+                }
+            });
+            $slideHover();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.date-inpt').datepicker();
+            //$('.custom-select').customSelect();
+            $slideHover();
+            (function ($) {
+                $(function () {
+                    $('.side-block input').styler({
+                        selectSearch: true
+                    });
+                });
+            })(jQuery);
+
+            $(function () {
+                $("#slider-range").slider({
+                    range: true,
+                    min: 0,
+                    max: 1500,
+                    values: [275, 1100],
+                    slide: function (event, ui) {
+                        $("#ammount-from").val(ui.values[0] + '$');
+                        $("#ammount-to").val(ui.values[1] + '$');
+                    }
+                });
+                $("#ammount-from").val($("#slider-range").slider("values", 0) + '$');
+                $("#ammount-to").val($("#slider-range").slider("values", 1) + '$');
+            });
+
+            $(function () {
+                $(document.body).on('appear', '.fly-in', function (e, $affected) {
+                    $(this).addClass("appeared");
+                });
+                $('.fly-in').appear({ force_process: true });
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        var i = 1;
+        $('.progress .circle').removeClass().addClass('circle');
+        $('.progress .bar').removeClass().addClass('bar');
+        setInterval(function () {
+            $('.progress .circle:nth-of-type(' + i + ')').addClass('active');
+            $('.progress .circle:nth-of-type(' + (i - 1) + ')').removeClass('active').addClass('done');
+            $('.progress .circle:nth-of-type(' + (i - 1) + ') .label').html('&#10003;');
+            $('.progress .bar:nth-of-type(' + (i - 1) + ')').addClass('active');
+            $('.progress .bar:nth-of-type(' + (i - 2) + ')').removeClass('active').addClass('done');
+            i++;
+            if (i == 8) {
+                $('.progress .circle').removeClass().addClass('circle');
+                $('.progress .bar').removeClass().addClass('bar');
+                i = 1;
+            }
+        }, 1000);
+    </script>
+        
+        </body>  
+</html> 

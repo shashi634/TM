@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<!-- Mirrored from sparrow-html.weblionmedia.net/hotel_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Apr 2017 19:11:43 GMT -->
+<head>
+    <title>Holiday Zone | Travel Agency | New Delhi</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery.ui.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="static/plugins/angular-block-ui.css" rel="stylesheet" />
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x- ng-cloak {
+            display: none !important;
+        }
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <script src="js/jquery.1.7.1.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body ng-controller="HomePageController" ng-cloak flow-prevent-drop>
+    <!-- // authorize // -->
+    <div ng-if="false">
+        <div class="block-ui-overlay"></div><div class="block-ui-message-container"><div class="block-ui-message"><i class="fa fa-cog fa-spin fa-5x"></i></div></div>
+    </div>
+    <div class="overlay"></div>
+    <div class="autorize-popup">
+        <div class="autorize-tabs">
+            <a href="#" class="autorize-tab-a current">Sign in</a>
+            <a href="#" class="autorize-tab-b">Register</a>
+            <a href="#" class="autorize-close"></a>
+            <div class="clear"></div>
+        </div>
+        <section class="autorize-tab-content">
+            <div class="autorize-padding">
+                <h6 class="autorize-lbl">Welocome! Login in to Your Accont</h6>
+                <input type="text" value="" placeholder="Name">
+                <input type="text" value="" placeholder="Password">
+                <footer class="autorize-bottom">
+                    <button class="authorize-btn">Login</button>
+                    <a href="#" class="authorize-forget-pass">Forgot your password?</a>
+                    <div class="clear"></div>
+                </footer>
+            </div>
+        </section>
+        <section class="autorize-tab-content">
+            <div class="autorize-padding">
+                <h6 class="autorize-lbl">Register for Your Account</h6>
+                <input type="text" value="" placeholder="Name">
+                <input type="text" value="" placeholder="Password">
+                <footer class="autorize-bottom">
+                    <button class="authorize-btn">Registration</button>
+                    <div class="clear"></div>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <!-- \\ authorize \\-->
+    <header id="top">
+        <div class="header-a">
+            <div class="wrapper-padding">
+                <div class="header-phone"><span>011 - 32328232, 43058282</span></div>
+                <div class="header-account">
+                    <a href="#">My account</a>
+                </div>
+                <div class="header-social">
+                    <a href="#" class="social-twitter"></a>
+                    <a href="#" class="social-facebook"></a>
+                    <a href="#" class="social-vimeo"></a>
+                    <a href="#" class="social-pinterest"></a>
+                    <a href="#" class="social-instagram"></a>
+                </div>
+                
+                <div class="header-lang">
+                    <a href="#"><img alt="" src="img/ind.jpg" /></a>
+                    
+                </div>
+                <div class="header-curency">
+                    <a href="#">INR</a>
+                    
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="header-b">
+            <!-- // mobile menu // -->
+            <div class="mobile-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">HOME</a>
+
+                        </li>
+                        <li>
+
+                            <a href="about_us.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="location.html">Locations</a>
+
+                        </li>
+                        <li>
+                            <a href="policy.html">Policy</a>
+
+                        </li>
+                        <li>
+                            <a href="faqs.html">FAQs</a>
+
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+
+                        </li>
+
+                        <li><a href="contacts.html">CONTACS</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- \\ mobile menu \\ -->
+
+            <div class="wrapper-padding">
+                <div class="header-logo"><a href="index-2.html"><img alt="" src="img/logo.png" /></a></div>
+                <div class="header-right">
+                    <a href="#" class="menu-btn"></a>
+                    <nav class="header-nav">
+                        <ul>
+                            <li>
+                                <a href="/">HOME</a>
+
+                            </li>
+                            <li>
+
+                                <a href="about_us.html">About us</a>
+                            </li>
+                            <li>
+                                <a href="location.html">Locations</a>
+
+                            </li>
+                            <li>
+                                <a href="policy.html">Policy</a>
+
+                            </li>
+                            <li>
+                                <a href="faqs.html">FAQs</a>
+
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+
+                            </li>
+
+                            <li><a href="contacts.html">CONTACS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- main-cont -->
+    <div class="main-cont">
+        <div class="body-wrapper">
+            <div class="wrapper-padding">
+                <div class="page-head">
+                    <div class="page-title">Hotels - <span>list style</span></div>
+                    <div class="breadcrumbs">
+                        <a href="#">Home</a> / <a href="#">Hotel</a> / <span>List style one</span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="two-colls">
+                    <div class="two-colls-left">
+                        <div class="srch-results-lbl fly-in">
+                            <span>Search Location</span>
+                        </div>
+                        <div class="side-block fly-in">
+                            <div class="side-block-search">
+                                
+                                <div class="page-search-p">
+                                    <!-- // -->
+                                    
+                                    <div class="srch-tab-line">
+                                        <label>Place / City Name</label>
+                                        <div class="input-a"><input type="text" value="" placeholder="Example:Manali" ng-model="searchParam.City" ng-change="getLocation()"></div>
+                                    </div>
+                                    <button class="srch-btn">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two-colls-right">
+                        <div class="two-colls-right-b">
+                            <div class="padding">
+
+                                 <div class="catalog-row list-rows">
+
+                                    <!-- // -->
+                                    <div class="cat-list-item fly-in" ng-repeat="x in locationData">
+                                        <div class="cat-list-item-l">
+                                            <a href="LocationDetail.html?id={{x.PublicId}}"><img alt="" style="width:100%; height:180px" src="{{x.FrontImage}}"></a>
+                                        </div>
+                                        <div class="cat-list-item-r">
+                                            <div class="cat-list-item-rb">
+                                                <div class="cat-list-item-p">
+                                                    <div class="cat-list-content">
+                                                        <div class="cat-list-content-a">
+                                                            <div class="cat-list-content-l">
+                                                                <div class="cat-list-content-lb">
+                                                                    <div class="cat-list-content-lpadding">
+                                                                        <div class="offer-slider-link"><a href="LocationDetail.html?id={{x.PublicId}}"">{{x.City}}, {{x.Country}}</a></div>
+                                                                        <div class="offer-slider-location">{{x.Country}} </div>
+                                                                        <p>{{x.Description}}</p>
+                                                                        <div class="cat-icons">
+                                                                            <span class="cat-icon-01 active"></span>
+                                                                            <span class="cat-icon-02"></span>
+                                                                            <span class="cat-icon-03"></span>
+                                                                            <span class="cat-icon-04"></span>
+                                                                            <span class="cat-icon-05"></span>
+                                                                            <span class="cat-icon-06"></span>
+                                                                            <div class="clear"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <br class="clear" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="cat-list-content-r">
+                                                            <div class="cat-list-content-p">
+                                                                <nav class="stars">
+
+                                                                    <div class="clear"></div>
+                                                                </nav>
+                                                                <div class="cat-list-review"></div>
+                                                                <div class="offer-slider-r">
+                                                                    <b>   {{x.TotalHotel}}       </b>
+                                                                    <span>   Listed Hotels   </span>
+                                                                </div>
+                                                                <a href="package.html?id={{x.LocationPublicId}}" class="cat-list-btn">Select</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br class="clear" />
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    
+
+                                </div>
+
+                                <div class="clear"></div>
+
+                            </div>
+                        </div>
+                        <br class="clear" />
+                    </div>
+                </div>
+                <div class="clear"></div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /main-cont -->
+
+    <footer class="footer-a">
+        <div class="wrapper-padding">
+            <div class="section">
+                <div class="footer-lbl">Get In Touch</div>
+                <div class="footer-adress">Address: Near Nirman Vihar Metro Staton,<br />Laxmi Nagar, India</div>
+                <div class="footer-phones">Telephones: 09891292895, 09899790403, 09899338232 </div>
+                <div class="footer-email">E-mail: holidayzonepankaj@gmail.com </div>
+                <div class="footer-skype">Skype: holidayzone</div>
+            </div>
+            <div class="section" style="margin-left:60px">
+                <div class="footer-lbl">We are Serving</div>
+                <div class="fly-in mp-b-left">
+                    <div class="regions">
+                        <div class="regions-holder">
+                            <map id="imgmap201410281607" name="imgmap201410281607"></map>
+                            <div class="asia"></div>
+                            <div class="africa"></div>
+                            <div class="austalia"></div>
+                            <div class="europe"></div>
+                            <div class="north-america"></div>
+                            <div class="south-america"></div>
+                        </div>
+                    </div>
+                    <!-- // regions // -->
+                    <nav class="regions-nav">
+                        <ul>
+                            <li><a class="europe" href="#">Europe</a></li>
+                            <li><a class="asia" href="#">Asia</a></li>
+                            <li><a class="north-america" href="#">North america</a></li>
+                            <li><a class="south-america" href="#">south america</a></li>
+                            <li><a class="africa" href="#">africa</a></li>
+                            <li><a class="austalia" href="#">australia</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="section">
+
+            </div>
+            <div class="section">
+                <div class="footer-lbl">newsletter sign up</div>
+                <div class="footer-subscribe">
+                    <div class="footer-subscribe-a">
+                        <input type="text" placeholder="you email" value="" />
+                    </div>
+                </div>
+                <button class="footer-subscribe-btn">Sign up</button>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </footer>
+
+    <footer class="footer-b">
+        <div class="wrapper-padding">
+            <div class="footer-left">© Copyright 2015 BY HolidayZone. All rights reserved.</div>
+            <div class="footer-social">
+                <a href="#" class="footer-twitter"></a>
+                <a href="#" class="footer-facebook"></a>
+                <a href="#" class="footer-vimeo"></a>
+                <a href="#" class="footer-pinterest"></a>
+                <a href="#" class="footer-instagram"></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+
+    <!-- // scripts // -->
+    <script src="js/jquery.1.7.1.js"></script>
+    <script src="js/jqeury.appear.js"></script>
+    <script src="js/jquery.ui.js"></script>
+    <script src="js/jquery.formstyler.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/custom.select.js"></script>
+    <script src="../ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+    <script src="angularjs/app.js"></script>
+    <script src="angularjs/XSS.js"></script>
+    <script src="angularjs/block-ui.js"></script>
+    <script src="angularjs/controller/HomePageController.js"></script>
+    <script src="angularjs/reposotory/PublicRepository.js"></script>
+    <script>
+  	$(document).ready(function(){
+  	$('.date-inpt').datepicker();
+    $('.custom-select').customSelect();
+    //$slideHover();
+		(function($) {
+  		$(function() {
+  			$('.side-block input').styler({
+  				selectSearch: true
+  			});
+  		});
+		})(jQuery);
+
+      $(function() {
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 0,
+          max: 1500,
+          values: [ 275, 1100 ],
+          slide: function( event, ui ) {
+            $("#ammount-from").val(ui.values[0]+'$');
+            $("#ammount-to").val(ui.values[1]+'$');
+          }
+        });
+        $("#ammount-from").val($("#slider-range").slider("values",0)+'$');
+        $("#ammount-to").val($("#slider-range").slider("values",1)+'$');
+      });
+
+  		$(function() {
+    			$(document.body).on('appear', '.fly-in', function(e, $affected) {
+      			$(this).addClass("appeared");
+    			});
+    			$('.fly-in').appear({force_process: true});
+  		});
+  	});
+    </script>
+    <!-- \\ scripts \\ -->
+
+</body>
+
+
+</html> 
